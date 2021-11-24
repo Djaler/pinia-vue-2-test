@@ -1,0 +1,38 @@
+{
+  "name": "pinia-vue-2-test",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "@vue/composition-api": "1.4.0",
+    "pinia": "2.0.4",
+    "vue": "2.6.14"
+  },
+  "devDependencies": {
+    "@babel/core": "7.16.0",
+    "@babel/preset-env": "7.16.4",
+    "@pinia/testing": "0.0.6",
+    "@vue/test-utils": "1.3.0",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-jest": "27.3.1",
+    "jest": "27.3.1",
+    "vue-jest": "3.0.7",
+    "vue-template-compiler": "2.6.14"
+  },
+  "babel": {
+    "presets": ["@babel/preset-env"]
+  },
+  "jest": {
+    "testEnvironment": "jsdom",
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "vue"
+    ],
+    "transform": {
+      ".*\\.(vue)$": "vue-jest",
+      ".*\\.(js)$": "babel-jest"
+    }
+  }
+}
