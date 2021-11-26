@@ -7,17 +7,19 @@
 </template>
 
 <script>
-    import { defineComponent } from '@vue/composition-api';
+    import { computed, defineComponent } from '@vue/composition-api';
     import { useCounterStore } from './store';
 
     export default defineComponent({
         name: 'App',
         setup() {
-            const { counter, increment } = useCounterStore();
+            const counterStore = useCounterStore();
+
+            const counter = computed(() => counterStore.counter)
 
             return {
                 counter,
-                increment,
+                increment: counterStore.increment,
             };
         },
     });
